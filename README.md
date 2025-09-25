@@ -4,6 +4,8 @@
 
 **FlxUndertale** is a framework for making **Undertale**-style mods and fangames, written 100% in **Haxe** — _at least I think so!_ 😅
 
+### The code isn't public yet.
+
 It was originally made for my fangame **"Undertale: BoundFate"**, but later I moved that project to another engine (I'm autistic and got overwhelmed by the code at the time).  
 The goal of **FlxUndertale** is to make it easier to create maps, dialogue systems, and combat mechanics inspired by Undertale, in a simple and modular way.
 
@@ -36,7 +38,7 @@ Some sprites (such as the character **Niz**) belong to **[@Stephanie Digits](htt
 
 ---
 
-## <img src="art/sections/progress.png" width="60%">
+## <img src="art/sections/progress.png" width="40%">
 
 <center> 
   <img src="art/progress.png" width="80%">
@@ -57,7 +59,7 @@ The Overworld works, but a rewrite is in progress before I release something sta
 
 ---
 
-## 🤝 Contributing
+## <img src='art/sections/contribucion.png'  width="40%">
 
 Since the project is very incomplete, **all contributions are welcome!**  
 If you find bugs or want to add features:
@@ -71,7 +73,7 @@ _Please be patient if I take time to respond, I’m still learning how to manage
 
 ---
 
-## Building
+## <img src='art/sections/building.png'  width="40%">
 
 You’ll need:
 
@@ -91,7 +93,7 @@ You can replace `hl` with `windows`, `linux`, `html5`, or any other supported ta
 
 ---
 
-## License
+## <img src='art/sections/license.png'  width="75%">
 
 This project is distributed under the **Apache 2.0** license _(or whatever you choose later)_.
 Check the [LICENSE](LICENSE) file for details.
