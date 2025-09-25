@@ -41,7 +41,7 @@ Some sprites (such as the character **Niz**) belong to **[@Stephanie Digits](htt
 ## <img src="art/sections/progress.png" width="25%">
 
 <center> 
-  <img src="art/progress.png" width="80%">
+  <img src="art/progress.png" width="50%">
 </center>
 
 Right now the project is **very WIP**.  
@@ -50,12 +50,6 @@ The Overworld works, but a rewrite is in progress before I release something sta
 ---
 
 <center> <br> <img src='art/sections/todo.png'> <br> <br> </center>
-
-- Rewrite the Overworld system to be more modular
-- Add full OGMO Editor support
-- Implement Undertale battle system
-- Improve dialogue & scripting system (Lua / JSON)
-- Write official documentation & examples
 
 ---
 
