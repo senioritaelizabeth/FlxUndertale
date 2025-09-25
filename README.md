@@ -19,7 +19,7 @@ You can follow updates and chat about the project in the [Haxe Discord server](h
 
 ---
 
-## <img src="art/sections/disclaimer.png" width="26%">
+## <img src="art/sections/disclaimer.png" height="30px" width='auto'>
 
 All **assets** used belong to **Toby Fox** and his game **Undertale**.  
 I do not own any of the sprites, sounds, or music.  
@@ -30,7 +30,7 @@ This is a **fan-made project** made just for fun.
 [<img src='art/ut-logo.png'>](https://store.steampowered.com/app/391525/Undertale/)  
 ❤️**Please buy Undertale on Steam to support the creator!**
 
-<img src='art/Annoying_Dog_sprite.webp' width='10%'>
+<img src='art/Annoying_Dog_sprite.webp' width='48px'>
 
 </p>
 
@@ -38,10 +38,10 @@ Some sprites (such as the character **Niz**) belong to **[@Stephanie Digits](htt
 
 ---
 
-## <img src="art/sections/progress.png" width="25%">
+## <img src="art/sections/progress.png"  height="45px" width='auto'>
 
 <p align="center"> 
-  <img src="art/progress.png" width="50%">
+  <img src="art/progress.png" height='40px'>
 </p>
 
 Right now the project is **very WIP**.  
@@ -53,7 +53,7 @@ The Overworld works, but a rewrite is in progress before I release something sta
 
 ---
 
-## <img src='art/sections/contribucion.png'  width="25%">
+## <img src='art/sections/contribucion.png'  height="45px" width='auto'>
 
 Since the project is very incomplete, **all contributions are welcome!**  
 If you find bugs or want to add features:
@@ -67,7 +67,7 @@ _Please be patient if I take time to respond, I’m still learning how to manage
 
 ---
 
-## <img src='art/sections/building.png'  width="25%">
+## <img src='art/sections/building.png'  height="45px" width='auto'>
 
 You’ll need:
 
@@ -87,7 +87,7 @@ You can replace `hl` with `windows`, `linux`, `html5`, or any other supported ta
 
 ---
 
-## <img src='art/sections/license.png'  width="25%">
+## <img src='art/sections/license.png'   height="45px" width='auto'>
 
 This project is distributed under the **Apache 2.0** license _(or whatever you choose later)_.
 Check the [LICENSE](LICENSE) file for details.
