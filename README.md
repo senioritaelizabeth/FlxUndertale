@@ -89,7 +89,7 @@ You can replace `hl` with `windows`, `linux`, `html5`, or any other supported ta
 
 ## <img src='art/sections/license.png'   height="45px" width='auto'>
 
-This project is distributed under the **Apache 2.0** license _(or whatever you choose later)_.
+This project is distributed under the **Apache 2.0** license _(or whatever you choose later) youre free to change if yuou want pal_.
 Check the [LICENSE](LICENSE) file for details.
 
 ---
