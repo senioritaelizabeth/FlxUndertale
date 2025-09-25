@@ -1,6 +1,6 @@
-<center>
+<p align="center">
   <img src="art/logo.png">
-</center>
+</p>
 
 **FlxUndertale** is a framework for making **Undertale**-style mods and fangames, written 100% in **Haxe** — _at least I think so!_ 😅
 
@@ -25,14 +25,14 @@ All **assets** used belong to **Toby Fox** and his game **Undertale**.
 I do not own any of the sprites, sounds, or music.  
 This is a **fan-made project** made just for fun.
 
-<center>
+<p align="center">
 
 [<img src='art/ut-logo.png'>](https://store.steampowered.com/app/391525/Undertale/)  
 ❤️**Please buy Undertale on Steam to support the creator!**
 
 <img src='art/Annoying_Dog_sprite.webp' width='10%'>
 
-</center>
+</p>
 
 Some sprites (such as the character **Niz**) belong to **[@Stephanie Digits](https://x.com/StephanieDigits)**.
 
@@ -40,16 +40,16 @@ Some sprites (such as the character **Niz**) belong to **[@Stephanie Digits](htt
 
 ## <img src="art/sections/progress.png" width="25%">
 
-<center> 
+<p align="center"> 
   <img src="art/progress.png" width="50%">
-</center>
+</p>
 
 Right now the project is **very WIP**.  
 The Overworld works, but a rewrite is in progress before I release something stable.
 
 ---
 
-<center> <br> <img src='art/sections/todo.png'> <br> <br> </center>
+<p align="center"> <br> <img src='art/sections/todo.png'> <br> <br> </p>
 
 ---
 
