@@ -27,7 +27,7 @@ This is a **fan-made project** made just for fun.
 
 <p align="center">
 
-[<img src='art/ut-logo.png'>](https://store.steampowered.com/app/391525/Undertale/)  
+[<img src='art/ut-logo.png' width='300px'>](https://store.steampowered.com/app/391525/Undertale/)  
 ❤️**Please buy Undertale on Steam to support the creator!**
 
 <img src='art/Annoying_Dog_sprite.webp' width='48px'>
