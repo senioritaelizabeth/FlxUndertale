@@ -4,9 +4,10 @@ import flixel.FlxG;
 import flixel.sound.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import undertale.UnderState;
-import undertale.overworld.OverworldScene;
+import undertale.core.AssetsPath;
+import undertale.core.UnderState;
 
+/** Intro story (not implemented yet). ENTER continues to the logo screen. */
 class IntroStoryScene extends UnderState
 {
 	public var mus:FlxSound;
@@ -31,7 +32,7 @@ class IntroStoryScene extends UnderState
 	{
 		if (FlxG.keys.justPressed.ENTER)
 		{
-			mus.fadeOut(0.05 * 30);
+			mus.fadeOut(0.05 * 15);
 			camera.fade(FlxColor.BLACK, 0.05 * 30, () -> nextState(), true);
 		}
 	}

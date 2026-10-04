@@ -2,9 +2,10 @@ package undertale.battle;
 
 import flixel.FlxG;
 import flixel.group.FlxGroup;
-import undertale.obj.Box;
 import undertale.physics.ContainerBody;
+import undertale.ui.Box;
 
+/** The battle box: a `ContainerBody` plus its drawing. Assign `soul` to confine it inside. */
 class BoxBattle extends FlxGroup
 {
 	static inline var BORDER_SIZE:Float = 6;

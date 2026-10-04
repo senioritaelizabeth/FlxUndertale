@@ -2,8 +2,11 @@ package undertale.overworld;
 
 import flixel.FlxG;
 import flixel.FlxState;
-import undertale.obj.Writter;
+import undertale.core.AssetsPath;
+import undertale.core.UnderState;
+import undertale.text.Writter;
 
+/** Overworld test room (player + test dialogue). */
 class OverworldScene extends UnderState
 {
 	var chara:Chara;

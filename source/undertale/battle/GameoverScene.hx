@@ -3,6 +3,9 @@ package undertale.battle;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.FlxGraphic;
+import undertale.core.AssetsPath;
+import undertale.core.Global;
+import undertale.core.UnderState;
 
 enum GOState
 {
@@ -13,10 +16,12 @@ enum GOState
 	ShowingGameOverText;
 }
 
+/** Game over sequence: last frame, soul breaks, shards fall. */
 class GameoverScene extends UnderState
 {
 	var phase:GOState = GOState.ShowingLastFrame;
 
+	/** Frame captured by `BattleScene` right before switching to this scene. Freed once the soul appears. */
 	public static var lastframe:FlxGraphic;
 
 	var _last_frame_sprite:FlxSprite;
@@ -79,7 +84,6 @@ class GameoverScene extends UnderState
 				{
 					_timer = 0;
 					phase = GOState.FallingShatt;
-					// al morir:
 					_soul_sprite.visible = false;
 
 					var size = _soul_sprite.frameWidth * _soul_sprite.scale.x;
@@ -117,45 +121,5 @@ class GameoverScene extends UnderState
 			_last_frame_sprite.destroy();
 			_last_frame_sprite = null;
 		}
-	}
-}
-
-class HeartShard extends FlxSprite
-{
-	static inline var STEP:Float = 1 / 30;
-
-	var hspeed:Float;
-	var vspeed:Float;
-	var gravity:Float = 0.2;
-	var gravityDir:Float = 270;
-	var acc:Float = 0;
-
-	public function new(x:Float, y:Float)
-	{
-		super(x, y);
-		loadGraphic(AssetsPath.image('battle/spr_heartshard'), true, 10, 10);
-		animation.add('idle', [0, 1, 2, 3], 7.5);
-		animation.play('idle');
-		antialiasing = false;
-
-		var direction = FlxG.random.float(0, 360);
-		var speed = 7;
-		hspeed = speed * Math.cos(direction * Math.PI / 180);
-		vspeed = -speed * Math.sin(direction * Math.PI / 180);
-		scale.set(0.5, 0.5);
-	}
-
-	override function update(elapsed:Float)
-	{
-		acc += elapsed;
-		while (acc >= STEP)
-		{
-			acc -= STEP;
-			hspeed += gravity * Math.cos(gravityDir * Math.PI / 180);
-			vspeed += -gravity * Math.sin(gravityDir * Math.PI / 180);
-			x += hspeed;
-			y += vspeed;
-		}
-		super.update(elapsed);
 	}
 }

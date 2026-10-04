@@ -1,5 +1,6 @@
 package undertale.physics;
 
+/** Gravity and jump movement (blue soul). `angle` rotates the gravity direction, 0 is down. */
 class GravityMotion
 {
 	static inline var GROUND_NORMAL_MIN:Float = 0.5;

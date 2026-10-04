@@ -1,5 +1,6 @@
 package undertale.physics;
 
+/** Base of all collision shapes (rectangle, circle, polygon). Rotates around its center. */
 class PhysicsBody
 {
 	public final shape:BodyShape;

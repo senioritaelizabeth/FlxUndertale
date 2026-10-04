@@ -1,4 +1,4 @@
-package undertale.obj;
+package undertale.text;
 
 typedef Pause =
 {
@@ -58,6 +58,11 @@ private class Token
 	}
 }
 
+/**
+ * Parses the text markup and lays out the characters.
+ * Markup: `[color=#RRGGBB]..[/color]`, `[wave]..[/wave]`, `[shake]..[/shake]`, `[pause=frames]`,
+ * `#` = new line. Escape `#`, `[` and `\` with a backslash.
+ */
 class TextLayout
 {
 	public static inline var NEWLINE:Int = 10;

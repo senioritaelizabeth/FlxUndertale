@@ -1,7 +1,8 @@
-package undertale.obj;
+package undertale.text;
 
 using StringTools;
 
+/** Text that shows a property of an object and refreshes it every frame (e.g. `Global.hp`). */
 class ValueText extends UnderText
 {
 	public var object:Dynamic;

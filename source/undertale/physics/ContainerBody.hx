@@ -1,5 +1,6 @@
 package undertale.physics;
 
+/** Rotatable rectangle that keeps other bodies inside it (the battle box). */
 class ContainerBody extends RectangleBody
 {
 	public var correctionX(default, null):Float = 0;

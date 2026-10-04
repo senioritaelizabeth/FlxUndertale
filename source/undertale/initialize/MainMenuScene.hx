@@ -4,8 +4,12 @@ import flixel.FlxG;
 import flixel.sound.FlxSound;
 import flixel.util.FlxColor;
 import haxe.ds.Vector;
-import undertale.obj.UnderText;
+import undertale.core.AssetsPath;
+import undertale.core.Constants;
+import undertale.core.Global;
+import undertale.core.UnderState;
 import undertale.overworld.OverworldScene;
+import undertale.text.UnderText;
 
 enum MenuModal
 {
@@ -20,6 +24,7 @@ enum MenuOrder
 	Left();
 }
 
+/** Main menu (begin game / continue / reset / settings). */
 class MainMenuScene extends UnderState
 {
 	// TODO: multiple lang support

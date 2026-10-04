@@ -1,5 +1,6 @@
 package undertale.physics;
 
+/** Overlap tests between shapes. */
 class Collision
 {
 	public static function overlaps(first:PhysicsBody, second:PhysicsBody):Bool

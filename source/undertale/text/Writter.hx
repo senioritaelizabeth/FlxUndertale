@@ -1,7 +1,8 @@
-package undertale.obj;
+package undertale.text;
 
 import flixel.FlxG;
 
+/** UnderText that types itself out character by character, with blip sounds. */
 class Writter extends UnderText
 {
 	static inline var FRAMES_PER_SECOND:Float = 30;

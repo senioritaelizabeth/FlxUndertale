@@ -1,4 +1,4 @@
-package undertale.battle;
+package undertale.debug;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
@@ -20,6 +20,10 @@ private typedef Tracked =
 	trigger:PhysicsBody
 }
 
+/**
+ * Debug overlay for physics bodies. F4 shows/hides it, F8 records a short trace to `debug/physics_trace.csv`.
+ * Only meant for debug builds.
+ */
 class PhysicsDebugger extends FlxBasic
 {
 	static inline var TRACE_FRAMES:Int = 30;

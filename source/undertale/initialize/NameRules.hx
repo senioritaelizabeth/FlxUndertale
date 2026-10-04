@@ -7,6 +7,7 @@ typedef NameVerdict =
 	restart:Bool
 }
 
+/** Decides which message the name entry shows for a chosen name, and whether it is allowed. */
 class NameRules
 {
 	public static inline var CORRECT:String = "Is this name correct?";

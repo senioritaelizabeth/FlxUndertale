@@ -4,9 +4,12 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import undertale.obj.UnderText;
-import undertale.obj.ValueText;
+import undertale.core.AssetsPath;
+import undertale.core.Global;
+import undertale.text.UnderText;
+import undertale.text.ValueText;
 
+/** HUD with the name, LV and HP bar. */
 class HealthDisplay extends FlxTypedGroup<FlxObject>
 {
 	var hp_sprite:FlxSprite;

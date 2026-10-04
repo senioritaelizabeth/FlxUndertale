@@ -1,8 +1,9 @@
-package undertale.battle;
+package undertale.battle.attacks;
 
 import flixel.FlxSprite;
 import undertale.physics.PhysicsBody;
 
+/** Base of everything that hurts the soul. Keeps its `PhysicsBody` in sync with the sprite. */
 class AttackParent extends FlxSprite
 {
 	public final body:PhysicsBody;

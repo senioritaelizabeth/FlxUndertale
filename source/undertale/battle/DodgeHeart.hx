@@ -3,6 +3,9 @@ package undertale.battle;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
+import undertale.battle.attacks.AttackParent;
+import undertale.core.AssetsPath;
+import undertale.core.Global;
 import undertale.physics.CircleBody;
 import undertale.physics.ContainerBody;
 import undertale.physics.GravityMotion;
@@ -15,6 +18,7 @@ enum SoulState
 	Blue;
 }
 
+/** The player soul. Red/Yellow move freely, Blue uses gravity. In debug builds, press 9 to take damage. */
 class DodgeHeart extends FlxSprite
 {
 	public static inline var SPEED:Float = 100;
@@ -58,10 +62,7 @@ class DodgeHeart extends FlxSprite
 		syncTransform();
 		super.update(elapsed);
 		updateHurtAnimation(elapsed);
-		#if debug
-		if (FlxG.keys.justPressed.NINE)
-			getHurt(1);
-		#end
+
 	}
 
 	public function setCenter(centerX:Float, centerY:Float):Void

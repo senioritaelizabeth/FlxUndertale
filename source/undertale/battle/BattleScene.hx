@@ -2,20 +2,23 @@ package undertale.battle;
 
 import flixel.FlxCamera;
 import flixel.FlxG;
-import flixel.graphics.FlxGraphic;
-import flixel.graphics.FlxGraphic;
 import flixel.group.FlxGroup;
-import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
-import openfl.display.BitmapData;
-import openfl.display.BitmapData;
-import openfl.display3D.Context3DTextureFormat;
-import openfl.geom.ColorTransform;
-import openfl.geom.Matrix;
-import openfl.geom.Matrix;
-import undertale.obj.UnderText;
-import undertale.obj.ValueText;
+import undertale.battle.attacks.AttackParent;
+import undertale.battle.attacks.BulletParent;
+import undertale.battle.attacks.CircleAttack;
+import undertale.battle.attacks.PolygonAttack;
+import undertale.core.AssetsPath;
+import undertale.core.Global;
+import undertale.core.UnderState;
+import undertale.text.UnderText;
+import undertale.text.ValueText;
+import undertale.util.ScreenCapture;
+#if debug
+import undertale.debug.PhysicsDebugger;
+#end
 
+/** Dodging battle. When HP reaches 0 it captures the last frame and goes to `GameoverScene`. */
 class BattleScene extends UnderState
 {
 	var dodgeheart:DodgeHeart;
@@ -32,6 +35,7 @@ class BattleScene extends UnderState
 
 	override function create():Void
 	{
+		FlxG.sound.playMusic(AssetsPath.music('prebattle'), 1.0, true);
 		super.create();
 		var text = new UnderText(-100, -100, 'Battle Scene', 'hud');
 		add(text);
@@ -82,19 +86,9 @@ class BattleScene extends UnderState
 			return;
 		if (Global.hp <= 0)
 		{
-			function worldToScreen(px:Float, py:Float, cam:FlxCamera):FlxPoint
-			{
-				return FlxPoint.get((px - cam.scroll.x) * cam.zoom
-					+ cam.width * 0.5 * (1 - cam.zoom)
-					+ cam.x,
-					(py - cam.scroll.y) * cam.zoom
-					+ cam.height * 0.5 * (1 - cam.zoom)
-					+ cam.y);
-			}
-
-		
-			var mid = dodgeheart.getGraphicMidpoint(); 
-			var s = worldToScreen(mid.x, mid.y, FlxG.camera);
+			// store the soul screen position (zoom applied) for the game over scene
+			var mid = dodgeheart.getGraphicMidpoint();
+			var s = ScreenCapture.worldToScreen(mid.x, mid.y, FlxG.camera);
 			Global.soulx = Math.round(s.x);
 			Global.souly = Math.round(s.y);
 			mid.put();
@@ -115,7 +109,7 @@ class BattleScene extends UnderState
 			pendingGameOver = false;
 			FlxG.signals.postDraw.addOnce(() ->
 			{
-				var g = captureLastFrame();
+				var g = ScreenCapture.captureLastFrame();
 				g.persist = true;
 				g.destroyOnNoUse = false;
 				GameoverScene.lastframe = g;
@@ -123,36 +117,6 @@ class BattleScene extends UnderState
 				FlxG.switchState(GameoverScene.new);
 			});
 		}
-	}
-
-	function captureLastFrame(scale:Int = 4):FlxGraphic
-	{
-		var sx = FlxG.scaleMode.scale.x;
-		var sy = FlxG.scaleMode.scale.y;
-		var w = FlxG.width * scale;
-		var h = FlxG.height * scale;
-
-		var ctx = FlxG.stage.context3D;
-		var tex = ctx.createRectangleTexture(w, h, Context3DTextureFormat.BGRA, true);
-		var bitmap = BitmapData.fromTexture(tex);
-
-		for (camera in FlxG.cameras.list)
-		{
-			if (camera == null || !camera.exists || !camera.visible || camera.alpha <= 0)
-				continue;
-
-			var sprite = camera.flashSprite;
-			var m = sprite.transform.matrix.clone();
-			m.scale(scale / sx, scale / sy);
-
-			var ct = new ColorTransform(1, 1, 1, camera.alpha);
-			bitmap.draw(sprite, m, ct, null, null, true);
-		}
-
-		var g = FlxGraphic.fromBitmapData(bitmap);
-		g.persist = true;
-		g.destroyOnNoUse = false;
-		return g;
 	}
 
 	public function addAttack(attack:AttackParent):Void

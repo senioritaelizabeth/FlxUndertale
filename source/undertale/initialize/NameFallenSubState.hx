@@ -4,9 +4,11 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
 import flixel.util.FlxColor;
+import undertale.core.AssetsPath;
+import undertale.core.Constants;
 import undertale.initialize.NameGrid.*;
 import undertale.initialize.NameRules.NameVerdict;
-import undertale.obj.UnderText;
+import undertale.text.UnderText;
 
 private enum Phase
 {
@@ -15,6 +17,7 @@ private enum Phase
 	Departing;
 }
 
+/** Name entry screen. */
 class NameFallenSubState extends FlxSubState
 {
 	static inline var FONT:String = "determination_sans";

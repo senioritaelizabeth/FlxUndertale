@@ -1,10 +1,11 @@
-package undertale.obj;
+package undertale.ui;
 
 import flixel.FlxBasic;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import undertale.physics.ContainerBody;
 
+/** Draws a `ContainerBody` as a white border with a black fill. */
 class Box extends FlxBasic
 {
 	public final body:ContainerBody;

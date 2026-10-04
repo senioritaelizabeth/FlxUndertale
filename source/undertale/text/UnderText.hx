@@ -1,4 +1,4 @@
-package undertale.obj;
+package undertale.text;
 
 import flixel.FlxG;
 import flixel.FlxStrip;
@@ -6,7 +6,7 @@ import flixel.graphics.FlxGraphic;
 import flixel.util.FlxColor;
 import openfl.Assets;
 import openfl.display.BitmapData;
-import undertale.obj.TextLayout;
+import undertale.text.TextLayout;
 
 private typedef Glyph =
 {
@@ -28,6 +28,7 @@ private typedef Face =
 	subsWidth:Int
 }
 
+/** Bitmap font text. Supports the markup parsed by `TextLayout`. */
 class UnderText extends FlxStrip
 {
 	static inline var DEFAULT_FIELD_WIDTH:Float = 640;

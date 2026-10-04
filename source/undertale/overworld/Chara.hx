@@ -3,7 +3,9 @@ package undertale.overworld;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.math.FlxPoint;
+import undertale.core.AssetsPath;
 
+/** Player character in the overworld. Moves with arrow keys or WASD. */
 class Chara extends FlxSprite
 {
 	public final SPEED = 100;

@@ -6,8 +6,10 @@ import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import undertale.battle.BattleScene;
-import undertale.obj.UnderText;
+import undertale.core.AssetsPath;
+import undertale.core.UnderState;
 import undertale.overworld.OverworldScene;
+import undertale.text.UnderText;
 
 using StringTools;
 
@@ -21,6 +23,7 @@ enum DebugModal
 }
 #end
 
+/** Title screen. In debug builds it also shows a menu to jump straight to other scenes. */
 class LogoScene extends UnderState
 {
 	#if debug
@@ -28,6 +31,7 @@ class LogoScene extends UnderState
 	var _textes:Array<UnderText> = [];
 	#end
 	var pressenter:UnderText;
+	var time_elapsed:Float = 0.0;
 
 	override function create()
 	{
@@ -58,10 +62,15 @@ class LogoScene extends UnderState
 		];
 		setupModals();
 		#end
-		pressenter = new UnderText(-320 / 2, 200, '[Press Z or ENTER to Continue]', 'hud_small');
+		pressenter = new UnderText(-320 / 2, 180, '[Press Z or ENTER to Continue]', 'hud_small');
 		pressenter.alignment = 'CENTER';
 		pressenter.alpha = 0.65;
+		pressenter.visible = false;
+		#if debug
+		pressenter.text = '[UP/DOWN to select, LEFT/RIGHT to change, ENTER to confirm]';
+		#end
 		add(pressenter);
+		// TODO: display activity level
 	}
 
 	#if debug
@@ -152,6 +161,11 @@ class LogoScene extends UnderState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		time_elapsed += elapsed;
+		if (time_elapsed > 3 && !pressenter.visible)
+		{
+			pressenter.visible = true;
+		}
 
 		#if debug
 		if (FlxG.keys.justPressed.UP)
@@ -190,6 +204,13 @@ class LogoScene extends UnderState
 				if (FlxG.keys.justPressed.ENTER)
 					FlxG.switchState(() -> Type.createInstance(nextState, []));
 			default:
+		}
+		#else
+		if (timeelapsed > 12)
+			FlxG.switchState(IntroStoryScene.new);
+		if (FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.Z)
+		{
+			FlxG.switchState(OverworldScene.new);
 		}
 		#end
 	}

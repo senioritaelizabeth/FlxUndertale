@@ -1,4 +1,4 @@
-package undertale.battle;
+package undertale.battle.attacks;
 
 import flixel.util.FlxColor;
 import flixel.util.FlxSpriteUtil;

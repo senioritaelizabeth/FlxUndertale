@@ -1,5 +1,6 @@
-package undertale;
+package undertale.core;
 
+/** Shared game state: player stats, save data and the soul position used by the game over transition. */
 class Global
 {
 	public static var hp:Float = 20;

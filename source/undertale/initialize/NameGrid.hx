@@ -1,5 +1,6 @@
 package undertale.initialize;
 
+/** Cursor movement over the name entry character grid. */
 class NameGrid
 {
 	public static inline var ROWS:Int = 8;

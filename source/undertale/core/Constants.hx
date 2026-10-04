@@ -1,5 +1,6 @@
-package undertale;
+package undertale.core;
 
+/** Game info and base resolution. */
 class Constants
 {
 	public static inline var GAME_NAME:String = "Undertale";

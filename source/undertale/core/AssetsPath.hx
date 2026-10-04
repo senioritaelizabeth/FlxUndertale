@@ -1,3 +1,9 @@
+package undertale.core;
+
+/**
+ * Builds asset paths so the rest of the code never hardcodes folders.
+ * Example: `AssetsPath.image("battle/spr_dodgeheart")` -> `assets/images/battle/spr_dodgeheart.png`
+ */
 class AssetsPath
 {
 	public static inline var IMAGES:String = "assets/images/";
